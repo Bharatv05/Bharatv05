@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/>
+    </marker>
+  </defs>
+
+  <!-- Orchestration bar -->
+  <rect x="260" y="8" width="650" height="36" rx="8" fill="#f3e8ff" stroke="#8250df" stroke-dasharray="6 4"/>
+  <text x="585" y="31" text-anchor="middle" font-size="14" fill="#6639ba" font-weight="600">Orchestration · Airflow · Databricks Jobs · Camunda</text>
+  <line x1="355" y1="44" x2="355" y2="60" stroke="#8250df" stroke-dasharray="4 3"/>
+  <line x1="700" y1="44" x2="700" y2="60" stroke="#8250df" stroke-dasharray="4 3"/>
+
+  <!-- Panels -->
+  <rect x="20"  y="60" width="200" height="330" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <rect x="260" y="60" width="190" height="330" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <rect x="490" y="60" width="420" height="330" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <rect x="950" y="60" width="230" height="330" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+  <g font-size="15" font-weight="700" fill="#1f2328" text-anchor="middle">
+    <text x="120" y="86">1 · Sources</text>
+    <text x="355" y="86">2 · Ingestion</text>
+    <text x="700" y="86">3 · Lakehouse (Medallion)</text>
+    <text x="1065" y="86">4 · Serving</text>
+  </g>
+
+  <!-- Sources -->
+  <g font-size="13" fill="#1f2328" text-anchor="middle">
+    <rect x="35" y="100" width="170" height="60" rx="8" fill="#ffffff" stroke="#0969da"/>
+    <text x="120" y="125" font-weight="600">ERP / OLTP DBs</text><text x="120" y="145" fill="#57606a">SAP · Sage · D365</text>
+    <rect x="35" y="175" width="170" height="60" rx="8" fill="#ffffff" stroke="#0969da"/>
+    <text x="120" y="200" font-weight="600">REST APIs</text><text x="120" y="220" fill="#57606a">SaaS · Zoho</text>
+    <rect x="35" y="250" width="170" height="60" rx="8" fill="#ffffff" stroke="#0969da"/>
+    <text x="120" y="275" font-weight="600">Files &amp; Docs</text><text x="120" y="295" fill="#57606a">PDF · CSV · Email</text>
+    <rect x="35" y="325" width="170" height="55" rx="8" fill="#ffffff" stroke="#0969da"/>
+    <text x="120" y="348" font-weight="600">Events</text><text x="120" y="367" fill="#57606a">Message queues</text>
+  </g>
+
+  <!-- Ingestion -->
+  <g font-size="13" fill="#1f2328" text-anchor="middle">
+    <rect x="275" y="140" width="160" height="70" rx="8" fill="#ffffff" stroke="#1a7f37"/>
+    <text x="355" y="168" font-weight="600">Batch / Incremental</text><text x="355" y="190" fill="#57606a">watermark · CDC</text>
+    <rect x="275" y="260" width="160" height="70" rx="8" fill="#ffffff" stroke="#1a7f37"/>
+    <text x="355" y="288" font-weight="600">Event-driven</text><text x="355" y="310" fill="#57606a">ActiveMQ · Kafka</text>
+  </g>
+
+  <!-- Data quality bar -->
+  <rect x="505" y="100" width="390" height="44" rx="8" fill="#fff8c5" stroke="#9a6700" stroke-dasharray="6 4"/>
+  <text x="700" y="120" text-anchor="middle" font-size="13" font-weight="600" fill="#7d4e00">Data Quality &amp; Observability</text>
+  <text x="700" y="137" text-anchor="middle" font-size="12" fill="#7d4e00">schema · freshness · volume · alerts</text>
+
+  <!-- Medallion layers -->
+  <g font-size="13" text-anchor="middle">
+    <rect x="505" y="190" width="110" height="80" rx="10" fill="#f4dcc4" stroke="#a0522d" stroke-width="1.5"/>
+    <text x="560" y="220" font-weight="700" fill="#6e3511">Bronze</text>
+    <text x="560" y="240" font-size="11" fill="#6e3511">raw</text><text x="560" y="255" font-size="11" fill="#6e3511">immutable</text>
+    <rect x="650" y="190" width="110" height="80" rx="10" fill="#e6e8eb" stroke="#6e7781" stroke-width="1.5"/>
+    <text x="705" y="220" font-weight="700" fill="#32383f">Silver</text>
+    <text x="705" y="240" font-size="11" fill="#32383f">cleaned</text><text x="705" y="255" font-size="11" fill="#32383f">deduped · conformed</text>
+    <rect x="795" y="190" width="100" height="80" rx="10" fill="#fdecb0" stroke="#bf8700" stroke-width="1.5"/>
+    <text x="845" y="220" font-weight="700" fill="#6b4b00">Gold</text>
+    <text x="845" y="240" font-size="11" fill="#6b4b00">facts · dims</text><text x="845" y="255" font-size="11" fill="#6b4b00">business KPIs</text>
+  </g>
+  <text x="632" y="292" text-anchor="middle" font-size="10" fill="#57606a">PySpark / SQL</text>
+  <text x="777" y="292" text-anchor="middle" font-size="10" fill="#57606a">modeling</text>
+
+  <!-- Serving -->
+  <g font-size="13" fill="#1f2328" text-anchor="middle">
+    <rect x="965" y="110" width="200" height="60" rx="8" fill="#ffffff" stroke="#bc4c00"/>
+    <text x="1065" y="135" font-weight="600">BI &amp; Dashboards</text><text x="1065" y="155" fill="#57606a">Power BI · Grafana</text>
+    <rect x="965" y="200" width="200" height="60" rx="8" fill="#ffffff" stroke="#bc4c00"/>
+    <text x="1065" y="225" font-weight="600">ML</text><text x="1065" y="245" fill="#57606a">features · models</text>
+    <rect x="965" y="290" width="200" height="60" rx="8" fill="#ffffff" stroke="#bc4c00"/>
+    <text x="1065" y="315" font-weight="600">Reverse ETL</text><text x="1065" y="335" fill="#57606a">ERP posting</text>
+  </g>
+
+  <!-- Flow arrows -->
+  <g stroke="#57606a" stroke-width="1.6" fill="none" marker-end="url(#arr)">
+    <path d="M205,130 C240,130 240,175 273,175"/>
+    <path d="M205,205 C240,205 240,175 273,175"/>
+    <path d="M205,280 C240,280 240,295 273,295"/>
+    <path d="M205,352 C240,352 240,295 273,295"/>
+    <path d="M435,175 C470,175 470,230 503,230"/>
+    <path d="M435,295 C470,295 470,230 503,230"/>
+    <path d="M615,230 L648,230"/>
+    <path d="M760,230 L793,230"/>
+    <path d="M895,230 C930,230 930,140 963,140"/>
+    <path d="M895,230 L963,230"/>
+    <path d="M895,230 C930,230 930,320 963,320"/>
+  </g>
+
+  <!-- Quarantine loop -->
+  <rect x="615" y="420" width="180" height="60" rx="8" fill="#ffebe9" stroke="#cf222e" stroke-dasharray="6 4"/>
+  <text x="705" y="445" text-anchor="middle" font-size="13" font-weight="600" fill="#a40e26">Quarantine / DLQ</text>
+  <text x="705" y="465" text-anchor="middle" font-size="12" fill="#a40e26">human review</text>
+  <g stroke="#cf222e" stroke-width="1.5" fill="none" stroke-dasharray="5 4" marker-end="url(#arrRed)">
+    <path d="M690,270 L690,418"/>
+    <path d="M725,420 L725,272"/>
+  </g>
+  <text x="684" y="405" text-anchor="end" font-size="11" fill="#a40e26">failed checks</text>
+  <text x="731" y="405" font-size="11" fill="#a40e26">reprocess</text>
+</svg>
